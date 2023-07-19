@@ -6,7 +6,6 @@ import paint
 import json
 
 pnt = paint.Painter()
-pnt.clear(200, 200)
 pnt.saveImage()
 
 # boilerplate
