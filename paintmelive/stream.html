@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>PaintMeLive Interface</title>
+        <style>
+            body {
+                margin-left: 200;
+            }
+            img {
+                image-rendering: pixelated;
+                image-rendering: -moz-crisp-edges;
+                image-rendering: crisp-edges;
+            }
+            * {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #info {
+                width: 400px;
+                height: 600px;
+                position: absolute;
+                font-size: 18px;
+                left: 850px;
+                top: 105px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🎨PaintMeLive🖌️</h1>
+        <h2>Join the discord to paint on THIS canvas: !discord</h2>
+        <img src="out/new.png" id="canvas" style="width:600px;height:600px;border: 1px solid gray;">
+        <p id="info">
+            PaintMeLive is a live paint canvas controlled by a discord bot, similar to the likes of r/place. To join, simply do !discord in the chat and join.
+            <br><br><br>
+            Discord: <span style="color:blue">discord.gg/nBECa52XTS</span>
+            <br>
+            Youtube: <span style="color:red">youtube.com/@odwn</span>
+        </p>
+
+        <script>
+            var pic = document.getElementById("canvas");
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            function change() {
+                pic.src = `out/new.png?${getRandomInt(1, 9999)}`;
+            }
+            setInterval(function(){
+                change()
+            }, 1000)
+        </script>
+    </body>
+</html>
