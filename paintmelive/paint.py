@@ -6,6 +6,7 @@ import time
 class Painter:
     def __init__(self):
         self.colours = json.loads(open(r"colours.json", "r", encoding="UTF-8").read())
+        self.pixels = json.loads(open(r"out/backup.json", "r", encoding="UTF-8").read())
     def clear(self, w, h):
         self.pixels = []
         for y in range(h):
