@@ -37,7 +37,7 @@ async def paint(ctx, x, y, c):
     pnt.set(int(x), int(y), pnt.convert(c))
     print("saving image...")
     pnt.saveImage()
-    with open("out/blackup.json", "w") as f:
+    with open("out/backup.json", "w") as f:
         json.dump(pnt.pixels, f)
 
 bot.run(config.token)
